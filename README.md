@@ -1,60 +1,88 @@
-🥗 Chatbot Dieta
+# 🥗 Chatbot Dieta
 
-Un chatbot de IA que usa la API de OpenAI para responder preguntas relacionadas con dietas y nutrición de forma inteligente. 🎯
+Un **chatbot inteligente de nutrición** que utiliza la API de **OpenAI** para responder preguntas sobre dietas, alimentación y hábitos saludables.
 
-Este proyecto está hecho con Node.js y se ejecuta localmente con npm start.
+Este proyecto está desarrollado en **Node.js** y se ejecuta localmente con `npm start`.
 
-📋 Características
+---
 
-Chat interactivo para consultas de dieta y nutrición.
+## 🚀 Tecnologías
+- Node.js  
+- Express  
+- OpenAI API  
+- Dotenv  
 
-Integración con la API de OpenAI (GPT-3.5 / GPT-4).
+---
 
-Respuestas generadas dinámicamente según lo que el usuario pregunte.
+## 📦 Instalación
 
-Configuración sencilla con un archivo .env para tu API key.
+Clona el repositorio:
 
-🚀 Comenzando
-1. Clona este repositorio
+```bash
 git clone https://github.com/Joaaan09/chatbot-dieta.git
 cd chatbot-dieta
+````
 
-2. Instala dependencias
+Instala las dependencias:
+
+```bash
 npm install
+```
 
-3. Configura tu archivo .env
+---
 
-Crea un archivo llamado .env en la raíz del proyecto con este contenido:
+## 🔐 Configuración (.env)
 
-OPENAI_API_KEY=TU_OPENAI_API_KEY_AQUI
+Crea un archivo **`.env`** en la raíz del proyecto y añade tu API Key de OpenAI:
+
+```env
+OPENAI_API_KEY=tu_api_key_aqui
 PORT=3000
+```
 
+⚠️ **Nunca subas este archivo a GitHub.**
+Debe estar incluido en `.gitignore` para proteger tu clave privada.
 
-🔑 IMPORTANTE: Sustituye TU_OPENAI_API_KEY_AQUI por tu propia API key de OpenAI. Esta clave es necesaria para que el chatbot pueda generar respuestas con la API de OpenAI.
+---
 
-💡 Si no tienes una API key de OpenAI, puedes crear una en https://platform.openai.com/
- y copiar tu key desde ahí.
+## ▶️ Ejecución
 
-4. Ejecuta la aplicación
+Inicia la aplicación con:
+
+```bash
 npm start
+```
 
+La aplicación se ejecutará en:
 
-Esto iniciará el servidor y podrás interactuar con el chatbot desde tu navegador o cliente HTTP en la dirección:
-
+```
 http://localhost:3000
+```
 
-🛠️ ¿Cómo funciona?
+---
 
-Este proyecto levanta un servidor Node.js que:
+## 🧠 ¿Cómo funciona?
 
-Recibe mensajes del usuario.
+1. El usuario envía una pregunta relacionada con nutrición o dieta.
+2. El servidor recibe la consulta.
+3. La consulta se envía a la API de OpenAI usando la clave del `.env`.
+4. OpenAI genera una respuesta.
+5. El chatbot devuelve la respuesta al usuario en tiempo real.
 
-Los envía a la API de OpenAI usando tu API key.
+---
 
-Devuelve la respuesta generada por el modelo como respuesta al usuario.
+## 📁 Variables de entorno
 
-La lógica principal está en el archivo de servidor (por ejemplo app.js), y usa la variable de entorno OPENAI_API_KEY para autenticarse con OpenAI.
+| Variable       | Descripción                         |
+| -------------- | ----------------------------------- |
+| OPENAI_API_KEY | Clave privada de OpenAI             |
+| PORT           | Puerto donde se ejecuta el servidor |
 
-📦 Scripts disponibles
-Script	Acción
-npm start	Inicia el servidor
+## 🧑‍💻 Autor
+
+**Joan Coll**
+Desarrollador Web Junior
+
+---
+
+
