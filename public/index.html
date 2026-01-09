@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assests/css/styles.css" />
+    <script src="./assests/js/main.js" defer></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js
+"></script>
+    <link rel="icon" type="image/png" href="./assests/img/icon-dieta.png" />
+    <title>Asistente de dieta semanal</title>
+  </head>
+  <body>
+    <header class="chat__header">
+      <img src="./assests/img/icon-dieta.png" class="header__icon" />
+      <h1 class="chat__header">Asistente de dieta semanal con IA</h1>
+    </header>
+
+    <section class="chat__box">
+      <!-- Contenedor de mensajes -->
+      <div class="chat__message-container">
+        <div class="chat__message chat__message--bot">
+          ¡Hola! Soy tu asistente nutricionista pra crear tu dieta semanal
+          personalizada. ¡Empezamos!
+          <strong>Cuanto pesas actualmente? (kg)</strong>
+        </div>
+      </div>
+
+      <!-- Inputs -->
+      <div class="chat__input-group">
+        <input
+          type="text"
+          id="inputText"
+          class="chat__input"
+          placeholder="¿Te puedo ayudar con tu dieta"
+        />
+        <button class="chat__button" id="resButton">Enviar</button>
+      </div>
+    </section>
+  </body>
+</html>

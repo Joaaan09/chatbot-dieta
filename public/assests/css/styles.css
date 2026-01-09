@@ -1,0 +1,233 @@
+/* ----------- RESET ----------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f1f7f2; /* tono saludable */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+/* ----------- HEADER ----------- */
+.chat__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.header__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.chat__header h1 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #2d572c; /* verde saludable */
+}
+
+/* ----------- CHAT BOX ----------- */
+.chat__box {
+  width: 100%;
+  max-width: 1250px; /* AUMENTADO */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5efe5;
+}
+
+
+/* ----------- CONTENEDOR DE MENSAJES ----------- */
+.chat__message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 400px;
+  max-height: 550px;
+  border: 1px solid #cfe5cf;
+  border-radius: 12px;
+  padding: 18px;
+  background: #f8fcf9;
+  overflow-y: auto;
+}
+
+/* Barra scroll suave */
+.chat__message-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.chat__message-container::-webkit-scrollbar-thumb {
+  background: #b4d8b4;
+  border-radius: 10px;
+}
+
+/* ----------- MENSAJES ----------- */
+.chat__message {
+  max-width: 85%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  line-height: 1.45;
+  font-size: 15.5px;
+  word-break: break-word;
+}
+
+/* ----------- USER MESSAGE ----------- */
+.chat__message--user {
+  align-self: flex-end;
+  background: #34a853;
+  color: white;
+  border-bottom-right-radius: 3px;
+  box-shadow: 0px 4px 10px rgba(52, 168, 83, 0.3);
+}
+
+/* ----------- BOT MESSAGE ----------- */
+.chat__message--bot {
+  align-self: flex-start;
+  background: #e9f3eb;
+  color: #2d572c;
+  border-bottom-left-radius: 3px;
+  border: 1px solid #d6e9d7;
+}
+
+/* ----------- INPUT GROUP ----------- */
+.chat__input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.chat__input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #b8d4b9;
+  font-size: 16px;
+  background: #ffffff;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.chat__input:focus {
+  border-color: #34a853;
+  box-shadow: 0 0 0 3px rgba(52, 168, 83, 0.2);
+  outline: none;
+}
+
+/* ----------- SELECT + BUTTON ----------- */
+.chat__inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.chat__select {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #b8d4b9;
+  font-size: 16px;
+  background: white;
+  transition: 0.2s;
+}
+
+.chat__select:focus {
+  border-color: #34a853;
+  box-shadow: 0 0 0 3px rgba(52, 168, 83, 0.2);
+  outline: none;
+}
+
+/* ----------- BUTTON ----------- */
+.chat__button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #34a853;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: 0.2s;
+  box-shadow: 0px 4px 10px rgba(52, 168, 83, 0.25);
+}
+
+.chat__button:hover {
+  background: #2e9449;
+}
+
+.chat__button:active {
+  transform: scale(0.96);
+}
+
+/* ----------- TABLA ----------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #dbe9dc;
+}
+
+/* ----------- CABECERA ----------- */
+table thead {
+  background: #34a853;
+  color: #ffffff;
+}
+
+table thead th {
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 0.3px;
+}
+
+/* ----------- CUERPO ----------- */
+table tbody tr {
+  border-bottom: 1px solid #e6f2e7;
+  transition: background 0.2s;
+}
+
+table tbody tr:hover {
+  background: #f3faf4;
+}
+
+table tbody td {
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #2d572c;
+}
+
+/* ----------- ZONAS ALTERNADAS ----------- */
+table tbody tr:nth-child(even) {
+  background: #fafdfb;
+}
+
+/* ----------- CELDAS NUMÉRICAS ----------- */
+table td.number,
+table th.number {
+  text-align: right;
+}
+
+/* ----------- CELDAS DESTACADAS ----------- */
+table td.highlight {
+  background: #dff5e2;
+  font-weight: 600;
+  color: #2d572c;
+}
+
+/* ----------- RESPONSIVE ----------- */
+table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+}
